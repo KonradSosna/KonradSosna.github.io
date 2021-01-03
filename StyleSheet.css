@@ -1,2 +1,94 @@
 ﻿body {
+    background-color:#202020;
+    margin:0px;
+    padding:0px;
+    text-decoration:none;
 }
+
+/*Navigation bar*/
+
+#navbar {
+    background: #151515;
+    width: 60px;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#logo {
+    padding-top:10px;
+    width: 100%;
+    height: 68px;
+}
+
+.sitenav {
+    width: 100%;
+    height: 200px;
+}
+
+ul{
+    list-style-type:none;
+    font-size:30px;
+    padding-left:0;
+    text-align:center;
+}
+
+ul li{
+    color:white;
+    margin:20px 0;
+}
+
+.navlink {
+    text-decoration: none;
+    color: white;
+}
+
+    .navlink:hover {
+        color: #cc3333;
+    }
+
+.social {
+    text-align:center;
+    width: 100%;
+    height: 150px;
+    font-size: 20px;
+    line-height:170%;
+    padding-top:5px;
+}
+
+.sociallink {
+    text-decoration: none;
+    color: #333333;
+}
+
+    .sociallink:hover {
+        color: #cc3333;
+    }
+
+  /*                                   */
+ /*           Main content            */
+/*                                   */
+
+
+/*Home Page*/
+
+#homepage-container {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 40%;
+    max-height: 90%;
+}
+
+#homepage {
+    font-family: 'Lato', sans-serif;
+}
+
+    #homepage h1 {
+        font-size: 50px;
+    }
+

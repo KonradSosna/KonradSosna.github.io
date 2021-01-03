@@ -1,10 +1,68 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Hello! My name is Konrad</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Hi I am a WEB developer and this is my personal website" />
+    <meta name="keywords" content="web, developer, html, css, javascript" />
+    <link rel="stylesheet" href="StyleSheet.css" type="text/css" />
+    <link rel="stylesheet" href="css/fontello.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <body>
+
+    <div id="navbar">
+
+        <a href="index.html" title="Home Page">
+            <div id="logo">
+                <img src="img/logo.png" />
+            </div>
+        </a>
+
+        <nav class="sitenav">
+            <ul>
+                <li><a href="index.html" class="navlink" title="home page"><i class="icon-home"></i></a></li>
+                <li><a href="#" class="navlink" title="about me"><i class="icon-tree"></i></a></li>
+                <li><a href="#" class="navlink" title="skills"><i class="icon-eye"></i></a></li>
+                <li><a href="#" class="navlink" title="contact"><i class="icon-mail"></i></a></li>
+            </ul>
+        </nav>
+
+        <footer class="social">
+            <a href="https://google.com" class="sociallink" target="_blank" title="My Facebook Profile"><div class="FB"><i class="icon-facebook-rect"></i></div></a>
+
+            <a href="https://github.com/KonradSosna" class="sociallink" target="_blank" title="My GitHub Profile"><div class="GH"><i class="icon-git-squared"></i></div></a>
+
+            <a href="https://www.linkedin.com/in/konrad-sosna-223257201/" class="sociallink" target="_blank" title="My LinkedIn Profile"><div class="LI"><i class="icon-linkedin-rect"></i></div></a>
+
+            <a href="https://www.google.com" class="sociallink" target="_blank" alt="lol" title="Mój mail"><div class="JJ"><i class="icon-mail"></i></div></a>
+        </footer>
+
+    </div>
+
+    <div id="homepage-container">
+        <main id="homepage">
+            <header id="caption">
+                <h1>Hello! My name is Konrad</h1>
+                <h2>Front-End Developer</h2>
+                <h2>Back-End Developer</h2>
+                <a href="" class="animate__animated animate__bounce">D</a>
+            </header>
+        </main>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#caption').hover(function () {
+                $(this).addClass('animate__animated animate__bounce');
+            }, function () {
+                    $(this).removeClass('animate__animated animate__bounce');
+            });
+        });
+    </script>
 
 </body>
 </html>
