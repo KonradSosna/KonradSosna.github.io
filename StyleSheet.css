@@ -111,13 +111,12 @@ input[type=submit] {
 
     input[type=submit]:hover {
         background-color: #cc4444;
+        font-family: 'Oswald', sans-serif;
     }
 
-#caption {
-    
-}
 
-h1 span:hover {
-    color: #cc3333;
+.caption {
+    float: left;
+    height: 40px;
+    font-size: 20px;
 }
-
