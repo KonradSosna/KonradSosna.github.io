@@ -49,13 +49,13 @@
         </nav>
 
         <footer class="social">
-            <a href="https://google.com" class="sociallink" target="_blank" title="My Facebook Profile"><div class="FB"><i class="icon-facebook-rect"></i></div></a>
+            <a href="https://www.facebook.com/konrad.sosna/" class="sociallink" target="_blank" title="My Facebook Profile"><div class="FB"><i class="icon-facebook-rect"></i></div></a>
 
             <a href="https://github.com/KonradSosna" class="sociallink" target="_blank" title="My GitHub Profile"><div class="GH"><i class="icon-git-squared"></i></div></a>
 
             <a href="https://www.linkedin.com/in/konrad-sosna-223257201/" class="sociallink" target="_blank" title="My LinkedIn Profile"><div class="LI"><i class="icon-linkedin-rect"></i></div></a>
 
-            <a href="https://www.google.com" class="sociallink" target="_blank" alt="lol" title="Mój mail"><div class="JJ"><i class="icon-mail"></i></div></a>
+            <a href="contact.html" class="sociallink" target="_blank" alt="lol" title="Mój mail"><div class="JJ"><i class="icon-mail"></i></div></a>
         </footer>
 
     </div>
@@ -117,14 +117,15 @@
             <div style="clear:both;"></div>
             <br />
 
-            <input type="submit" id="button" value="Contact me" />
-
+            <a href="contact.html" class="navlink animate__animated animate__fadeIn">
+                <input type="submit" class="button" value="Contact me" />
+            </a>
         </main>
     </div>
 
     <script>
         $(document).ready(function () {
-            $('#button').hover(function () {
+            $('.button').hover(function () {
                 $(this).addClass('animate__animated animate__headShake');
             }, function () {
                 $(this).removeClass('animate__animated animate__headShake');

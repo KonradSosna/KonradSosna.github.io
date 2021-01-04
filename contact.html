@@ -61,7 +61,7 @@
     </div>
 
     <div id="homepage-container">
-        <div class="container">
+        <div class="container animate__animated animate__fadeInLeft">
 
             <div class="contactdiv">
                 <h2 style="color:white;font-size:40px;margin-bottom:10px;text-align:center;">Send e-mail to Konrad:</h2>
@@ -70,9 +70,9 @@
                     <input type="text" name="name" placeholder="Name">
                     <input type="text" name="mail" placeholder="E-mail"><br>
                     <input type="text" name="subject" id="subject" placeholder="Subject" /><br />
-                    <textarea id="message" placeholder="Message"></textarea><br><br>
-                    <input id="button" type="submit" value="Send">
-                    <input id="button" type="reset" value="Clear">
+                    <input type="text" name="message" id="message" placeholder="Message" /><br><br>
+                    <input class="button" type="submit" value="Send">
+                    <input class="button" type="reset" value="Clear">
                 </form>
             </div>
 
@@ -85,7 +85,7 @@
 
     <script>
         $(document).ready(function () {
-            $('#button').hover(function () {
+            $('.button').hover(function () {
                 $(this).addClass('animate__animated animate__headShake');
             }, function () {
                 $(this).removeClass('animate__animated animate__headShake');
