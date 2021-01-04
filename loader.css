@@ -10,9 +10,16 @@
     -webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
     -moz-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
     box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
-    float: left;
-    margin-left: 10px;
-    margin-right: 5px;
+    float:left;
+    
+}
+
+.bar {
+   float: left;
+   height:60px;
+   display:flex;
+   align-items:center;
+   margin-left:10px;
 }
 
     .meter > span {

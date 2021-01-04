@@ -44,7 +44,7 @@
                 <li><a href="index.html" class="navlink" title="home page"><i class="icon-home"></i></a></li>
                 <li><a href="#" class="navlink" title="about me"><i class="icon-user"></i></a></li>
                 <li><a href="#" class="navlink" title="skills"><i class="icon-eye"></i></a></li>
-                <li><a href="contact.html" class="navlink" title="contact"><i class="icon-mail"></i></a></li>
+                <li><a href="#" class="navlink" title="contact"><i class="icon-mail"></i></a></li>
             </ul>
         </nav>
 
@@ -61,65 +61,26 @@
     </div>
 
     <div id="homepage-container">
-        <main id="homepage">
-            <header class="animate__animated animate__bounceInLeft">
-                <h1>
-                    <span style="color:red;">H</span>
-                    <span>e</span>
-                    <span>l</span>
-                    <span>l</span>
-                    <span>o</span>
-                    <span>!</span>
-                    <span>&nbsp;</span>
-                    <span>M</span>
-                    <span>y</span>
-                    <span>&nbsp;</span>
-                    <span>n</span>
-                    <span>a</span>
-                    <span>m</span>
-                    <span>e</span>
-                    <span>&nbsp;</span>
-                    <span>i</span>
-                    <span>s</span>
-                    <span>&nbsp;</span>
-                    <span>K</span>
-                    <span>o</span>
-                    <span>n</span>
-                    <span>r</span>
-                    <span>a</span>
-                    <span>d</span>
-                </h1>
-            </header>
+        <div class="container">
 
-            <script>
-                setTimeout(function () {
+            <div class="contactdiv">
+                <h2 style="color:white;font-size:40px;margin-bottom:10px;text-align:center;">Send e-mail to Konrad:</h2>
 
-                    $('#button').fadeIn('slow');
+                <form action="mailto:konrad.sosna.95@gmail.com" method="post" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="text" name="mail" placeholder="E-mail"><br>
+                    <input type="text" name="subject" id="subject" placeholder="Subject" /><br />
+                    <textarea id="message" placeholder="Message"></textarea><br><br>
+                    <input id="button" type="submit" value="Send">
+                    <input id="button" type="reset" value="Clear">
+                </form>
+            </div>
 
-                }, 1000);
-            </script>
+            <div class="contactdiv">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4754.197151185822!2d14.545490679030342!3d53.43094571214165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa09146aa79d7d%3A0x754da3cae3d36dea!2sCentrum%2C%2071-899%20Szczecin!5e0!3m2!1spl!2spl!4v1609778151704!5m2!1spl!2spl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div><div style="clear:both;"></div>
 
-            <div class="caption animate__animated animate__fadeIn">Front-End Developer</div>
-            <div class="bar">
-                <div class="meter">
-                    <span style="width: 100%"></span>
-                </div>
-            </div><div class="bar">Completed</div>
-            <div style="clear:both;"></div>
-
-
-            <div class="caption animate__animated animate__fadeIn">Back-End Developer</div>
-            <div class="bar">
-                <div class="meter">
-                    <span style="width: 60%"></span>
-                </div>
-            </div><div class="bar">In Progress ...</div>
-            <div style="clear:both;"></div>
-            <br />
-
-            <input type="submit" id="button" value="Contact me" />
-
-        </main>
+        </div>
     </div>
 
     <script>
