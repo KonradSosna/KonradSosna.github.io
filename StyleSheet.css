@@ -1,8 +1,9 @@
 ﻿body {
-    background-color:#202020;
-    margin:0px;
-    padding:0px;
-    text-decoration:none;
+    background-color: #202020;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
 }
 
 /*Navigation bar*/
@@ -85,10 +86,38 @@ ul li{
 }
 
 #homepage {
-    font-family: 'Lato', sans-serif;
+    color:white;
 }
 
     #homepage h1 {
-        font-size: 50px;
+        font-size:50px;
     }
+
+input[type=submit] {
+    width: 250px;
+    height: 60px;
+    box-sizing: border-box;
+    background-color: #cc3333;
+    border: 2px solid grey;
+    outline:none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    -webkit-box-shadow: 10px 11px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 11px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 11px 5px 0px rgba(0,0,0,0.75);
+}
+
+    input[type=submit]:hover {
+        background-color: #cc4444;
+    }
+
+#caption {
+    
+}
+
+h1 span:hover {
+    color: #cc3333;
+}
 

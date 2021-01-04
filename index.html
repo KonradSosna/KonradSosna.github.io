@@ -7,10 +7,26 @@
     <meta name="description" content="Hi I am a WEB developer and this is my personal website" />
     <meta name="keywords" content="web, developer, html, css, javascript" />
     <link rel="stylesheet" href="StyleSheet.css" type="text/css" />
+    <link rel="stylesheet" href="loader.css" type="text/css" />
     <link rel="stylesheet" href="css/fontello.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(function () {
+            $(".meter > span").each(function () {
+                $(this)
+                    .data("origWidth", $(this).width())
+                    .width(0)
+                    .animate({
+                        width: $(this).data("origWidth")
+                    }, 1200);
+            });
+        });
+    </script>
+
+
 </head>
 <body>
 
@@ -43,23 +59,39 @@
 
     </div>
 
-    <div id="homepage-container">
+    <div id="homepage-container" style="border:2px solid white;">
         <main id="homepage">
             <header id="caption">
-                <h1>Hello! My name is Konrad</h1>
-                <h2>Front-End Developer</h2>
-                <h2>Back-End Developer</h2>
-                <a href="" class="animate__animated animate__bounce">D</a>
+                <h1>
+                    <span style="color:red">H</span>ello! My name is Konrad
+                </h1>
             </header>
+
+            <div style="float:left;height:40px;font-size:20px;">Front-End Developer</div>
+            <div class="meter" style="float:left;margin-left:10px;">
+                <span style="width: 100%"></span>
+            </div>
+            <div style="clear:both;"></div>
+            <div style="float:left;height:40px;font-size:20px;">Back-End Developer</div>
+
+            <div class="meter" style="float:left;margin-left:10px;">
+                <span style="width: 25%"></span>
+            </div>
+
+            <div style="clear:both;"></div>
+            <br />
+
+            <input type="submit" id="button" value="Contact me" />
+
         </main>
     </div>
 
     <script>
         $(document).ready(function () {
-            $('#caption').hover(function () {
-                $(this).addClass('animate__animated animate__bounce');
+            $('#button').hover(function () {
+                $(this).addClass('animate__animated animate__headShake');
             }, function () {
-                    $(this).removeClass('animate__animated animate__bounce');
+                    $(this).removeClass('animate__animated animate__headShake');
             });
         });
     </script>
