@@ -40,14 +40,25 @@ ul li{
     margin:20px 0;
 }
 
+li:hover {
+    color: #cc3333;
+}
+
 .navlink {
     text-decoration: none;
     color: white;
 }
 
-    .navlink:hover {
-        color: #cc3333;
-    }
+.navlinkhover {
+    text-decoration: none;
+    color: #cc3333;
+    font-size: 15px;
+    line-height:120%;
+}
+
+.navlink:hover {
+    color: #cc3333;
+}
 
 .social {
     text-align:center;
@@ -76,14 +87,16 @@ ul li{
 
 #homepage-container {
     position: absolute;
-    margin-left:60px;
+    margin-left: 60px;
     left: 10%;
     top: 50%;
+    min-height: 500px;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 50%;
     max-height: 90%;
+    
 }
 
 #homepage {
@@ -92,6 +105,10 @@ ul li{
 
     #homepage h1 {
         font-size:60px;
+    }
+
+    #homepage h1:hover{
+        cursor:pointer;
     }
 
 input[type=submit], input[type=reset] {
@@ -110,7 +127,7 @@ input[type=submit], input[type=reset] {
     box-shadow: 10px 11px 5px 0px rgba(0,0,0,0.75);
 }
 
-    input[type=submit], input[type=reset]:hover {
+    input[type=submit]:hover, input[type=reset]:hover {
         background-color: #cc4444;
     }
 
@@ -129,10 +146,6 @@ h1 span{
     padding:0px;
 }
 
-    h1 span:hover {
-        color: red;
-        animation-iteration-count:2;
-    }
 
 /*Contact Page*/
 
@@ -152,6 +165,13 @@ h1 span{
     height: 450px;
     margin:20px;
 }
+
+    .contactdiv h1 {
+        color: white;
+        font-size: 40px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
 
 .map {
     float: left;
@@ -193,4 +213,41 @@ input[type=text] {
     vertical-align: text-top;
     font-family: 'Oswald', sans-serif;
     font-size:20px;
+}
+
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .10em solid white; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+        text-align:center;
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: white;
+    }
+}
+
+.contactdiv h1 {
+    margin-left:auto;
+    margin-right:auto;
+    width: 350px;
 }

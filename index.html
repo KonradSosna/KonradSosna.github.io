@@ -12,20 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="jquery-3.5.1.min.js"></script>
-
-    <script>
-        $(function () {
-            $(".meter > span").each(function () {
-                $(this)
-                    .data("origWidth", $(this).width())
-                    .width(0)
-                    .animate({
-                        width: $(this).data("origWidth")
-                    }, 1200);
-            });
-        });
-    </script>
+    <script src="jquery-3.5.1.min.js"></script>    
+    <script src="JavaScript.js"></script>
 
 
 </head>
@@ -41,7 +29,7 @@
 
         <nav class="sitenav">
             <ul>
-                <li><a href="index.html" class="navlink" title="home page"><i class="icon-home"></i></a></li>
+                <li id="1"><a href="index.html" class="navlink" title="home page"><i class="icon-home"></i></a></li>
                 <li><a href="#" class="navlink" title="about me"><i class="icon-user"></i></a></li>
                 <li><a href="#" class="navlink" title="skills"><i class="icon-eye"></i></a></li>
                 <li><a href="contact.html" class="navlink" title="contact"><i class="icon-mail"></i></a></li>
@@ -49,7 +37,7 @@
         </nav>
 
         <footer class="social">
-            <a href="https://www.facebook.com/konrad.sosna/" class="sociallink" target="_blank" title="My Facebook Profile"><div class="FB"><i class="icon-facebook-rect"></i></div></a>
+            <a href="https://www.facebook.com/konrad.sosna/" id="2" class="sociallink" target="_blank" title="My Facebook Profile"><div><i class="icon-facebook-rect"></i></div></a>
 
             <a href="https://github.com/KonradSosna" class="sociallink" target="_blank" title="My GitHub Profile"><div class="GH"><i class="icon-git-squared"></i></div></a>
 
@@ -61,9 +49,9 @@
     </div>
 
     <div id="homepage-container">
-        <main id="homepage">
+        <main id="homepage" style="">
             <header class="animate__animated animate__bounceInLeft">
-                <h1>
+                <h1 id="title">
                     <span style="color:red;">H</span>
                     <span>e</span>
                     <span>l</span>
@@ -91,13 +79,29 @@
                 </h1>
             </header>
 
-            <script>
+            <script type="text/javascript">
+
+
+
+                document.addEventListener('DOMContentLoaded', function () {
+                    $('.button').hide();
+                }, false);
                 setTimeout(function () {
-
-                    $('#button').fadeIn('slow');
-
+                    $('.button').fadeIn('slow');
                 }, 1000);
+
+
+                let test1 = document.getElementById("1");
+                let tempHTML = document.getElementById("1").innerHTML;
+                test1.addEventListener("mouseover", function (event) {
+                    document.getElementById("1").innerHTML += '<a href="index.html' + wp + '">click me</a>';
+                });
+                test1.addEventListener("mouseout", function (event) {
+                    document.getElementById("1").innerHTML = tempHTML;
+                });
+
             </script>
+
 
             <div class="caption animate__animated animate__fadeIn">Front-End Developer</div>
             <div class="bar">
@@ -123,27 +127,61 @@
         </main>
     </div>
 
-    <script>
-        $(document).ready(function () {
-            $('.button').hover(function () {
-                $(this).addClass('animate__animated animate__headShake');
-            }, function () {
-                $(this).removeClass('animate__animated animate__headShake');
-            });
-        });
-    </script>
+        <canvas id="c" style="background: #202020;display:block;"></canvas>
 
-    <script>
-        $(document).ready(function () {
-            $('span').hover(function () {
-                $(this).addClass('animate__animated animate__headShake');
-            }, function () {
-                $(this).removeClass('animate__animated animate__headShake');
-            });
-        });
-    </script>
+        <script>
+            // geting canvas by id c
+            var c = document.getElementById("c");
+            var ctx = c.getContext("2d");
+
+            //making the canvas full screen
+            c.height = window.innerHeight;
+            c.width = window.innerWidth;
 
 
+            //chinese characters - taken from the unicode charset
+            var matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+            //converting the string into an array of single characters
+            matrix = matrix.split("");
+
+            var font_size = 10;
+            var columns = c.width / font_size; //number of columns for the rain
+            //an array of drops - one per column
+            var drops = [];
+            //x below is the x coordinate
+            //1 = y co-ordinate of the drop(same for every drop initially)
+            for (var x = 0; x < columns; x++)
+                drops[x] = 1;
+
+            //drawing the characters
+            function draw() {
+                //Gray BG for the canvas
+                //translucent BG to show trail
+                ctx.fillStyle = "rgba(31, 31, 31, 0.3)";
+                ctx.fillRect(0, 0, c.width, c.height);
+
+                ctx.fillStyle = "#cc3333"; //red text
+                ctx.font = font_size + "px arial";
+                //looping over drops
+                for (var i = 0; i < drops.length; i++) {
+                    //a random chinese character to print
+                    var text = matrix[Math.floor(Math.random() * matrix.length)];
+                    //x = i*font_size, y = value of drops[i]*font_size
+                    ctx.fillText(text, i * font_size, drops[i] * font_size);
+
+                    //sending the drop back to the top randomly after it has crossed the screen
+                    //adding a randomness to the reset to make the drops scattered on the Y axis
+                    //if (drops[i] * font_size > c.height )
+                    //    drops[i] = 0;
+
+                    //incrementing Y coordinate
+                    drops[i]++;
+                }
+            }
+
+            setInterval(draw, 35);
+
+        </script>
 
 </body>
 </html>
