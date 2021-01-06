@@ -1,14 +1,10 @@
 ﻿#aboutpage-container {
-    position: absolute;
     margin-left: 60px;
-    left: 10%;
-    top: 50%;
-    min-height: 500px;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 50%;
-    max-height: 90%;
+    height: 99vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -173,4 +169,15 @@ h1 {
             left: 50px;
             right: inherit;
         }
+}
+
+#scroll{
+    position:fixed;
+    right:50px;
+    bottom:50px;
+    background:url(img/logo.png);
+    text-decoration:none;
+    width:50px;
+    height:50px;
+    overflow:hidden;
 }
