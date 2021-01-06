@@ -96,7 +96,6 @@ li:hover {
     transform: translateY(-50%);
     width: 50%;
     max-height: 90%;
-    
 }
 
 #homepage {
@@ -112,7 +111,7 @@ li:hover {
     }
 
 input[type=submit], input[type=reset] {
-    width: 250px;
+    width: 240px;
     height: 60px;
     box-sizing: border-box;
     background-color: #cc3333;
@@ -125,6 +124,11 @@ input[type=submit], input[type=reset] {
     -webkit-box-shadow: 10px 11px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 11px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 11px 5px 0px rgba(0,0,0,0.75);
+}
+
+subject::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: 'Oswald', sans-serif !important;
+    opacity: 1;
 }
 
     input[type=submit]:hover, input[type=reset]:hover {
@@ -149,22 +153,36 @@ h1 span{
 
 /*Contact Page*/
 
+.contactpage-container {
+    margin-left: 60px;
+    height: 99vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .container {
-    width: 1300px;
-    height: 600px;
+    width: 1200px;
+    padding: 50px 20px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     display: flex;
     border-radius: 60px;
     background-color: #151515;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contactdiv {
     float: left;
     height: 450px;
-    margin:20px;
 }
+
+    .contactdiv:first-child {
+        margin-right: 40px;
+    }
 
     .contactdiv h1 {
         color: white;
@@ -180,14 +198,15 @@ h1 span{
 
 input[type=text] {
     outline: none;
-    width: 230px;
+    width: 234px;
     height: 30px;
     margin-bottom: 10px;
-    margin-right: 10px;
+    margin-right: 5px;
     background-color: #303030;
     color: white;
     outline: none;
     border: none;
+    font-family: 'Oswald', sans-serif !important;
 }
 
 #subject {
@@ -211,7 +230,6 @@ input[type=text] {
     outline: none;
     border: none;
     vertical-align: text-top;
-    font-family: 'Oswald', sans-serif;
     font-size:20px;
 }
 
