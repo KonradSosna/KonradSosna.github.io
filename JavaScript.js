@@ -37,6 +37,9 @@
                 }, 1200);
         });
 
-  });
+});
 
-// button fade in
+window.addEventListener('load', () => {
+    const loader = document.querySelector('.loader1');
+    loader.classList.add('preload-finnish');
+});

@@ -6,9 +6,10 @@
     font-family: 'Oswald', sans-serif !important;
 }
 
-/*Navigation bar*/
+/*--------------------Navigation Bar--------------------*/
 
 #navbar {
+    box-sizing:border-box;
     background: #151515;
     width: 60px;
     height: 100%;
@@ -28,28 +29,28 @@
     height: 200px;
 }
 
-ul{
-    list-style-type:none;
-    font-size:30px;
-    padding-left:0;
-    text-align:center;
+.sitenav ul {
+    list-style-type: none;
+    font-size: 30px;
+    padding-left: 0;
+    text-align: center;
 }
 
-ul li{
-    color:white;
-    margin:20px 0;
+.sitenav ul li {
+    color: white;
+    margin: 20px 0;
 }
 
-li:hover {
-    color: #cc3333;
-}
+    .sitenav ul li li:hover {
+        color: #cc3333;
+    }
 
 .navlink {
     text-decoration: none;
     color: white;
 }
 
-.navlinkhover {
+.navlinkhover { /*change on text with hover - need work*/
     text-decoration: none;
     color: #cc3333;
     font-size: 15px;
@@ -61,12 +62,12 @@ li:hover {
 }
 
 .social {
-    text-align:center;
+    text-align: center;
     width: 100%;
     height: 150px;
     font-size: 20px;
-    line-height:170%;
-    padding-top:5px;
+    line-height: 170%;
+    padding-top: 5px;
 }
 
 .sociallink {
@@ -78,25 +79,46 @@ li:hover {
         color: #cc3333;
     }
 
-  /*                                   */
- /*           Main content            */
-/*                                   */
+/*--------------------ScrollBar--------------------*/
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    animation: animate 5s linear infinite;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #151515;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#ED213A, #6f0000);
+    animation: animate 5s linear infinite;
+    border-radius: 40px;
+}
 
 
-/*Home Page*/
+        /*                                   */
+        /*           Main content            */
+        /*                                   */
+
+
+
+/*--------------------Home Page--------------------*/
+
 
 #homepage-container {
-    position: absolute;
-    margin-left: 60px;
-    left: 10%;
-    top: 50%;
-    min-height: 500px;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 50%;
-    max-height: 90%;
-}
+            position: absolute;
+            margin-left: 60px;
+            left: 10%;
+            top: 50%;
+            min-height: 500px;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            width: 50%;
+            max-height: 90%;
+        }
 
 #homepage {
     color:white;
@@ -151,29 +173,32 @@ h1 span{
 }
 
 
-/*Contact Page*/
+/*--------------------Contact Page--------------------*/
 
 .contactpage-container {
     margin-left: 60px;
-    height: 99vh;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
 }
 
-.container {
-    width: 1200px;
-    padding: 50px 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    border-radius: 60px;
-    background-color: #151515;
-    margin-left: auto;
-    margin-right: auto;
-}
+    .contactpage-container .content {
+        width: 1200px;
+        padding: 50px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        border-radius: 60px;
+        background-color: #151515;
+        margin-left: auto;
+        margin-right: auto;
+        -webkit-box-shadow: -3px 0px 21px 6px rgba(0,0,0,0.75);
+        -moz-box-shadow: -3px 0px 21px 6px rgba(0,0,0,0.75);
+        box-shadow: -3px 0px 21px 6px rgba(0,0,0,0.75);
+    }
 
 .contactdiv {
     float: left;
@@ -235,9 +260,9 @@ input[type=text] {
 
 
 .typewriter h1 {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .10em solid white; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
+    overflow: hidden; 
+    border-right: .10em solid white; 
+    white-space: nowrap; 
     animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
 }
 
@@ -268,4 +293,98 @@ input[type=text] {
     margin-left:auto;
     margin-right:auto;
     width: 350px;
+}
+
+
+/*--------------------Skills Page--------------------*/
+
+.text-zone {
+    position:absolute;
+    left: 10%;
+    top: 35%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 35%;
+    vertical-align: middle!important;
+    max-height: 90%;
+    box-sizing:border-box;
+}
+
+    .text-zone h1 {
+        font-size: 53px;
+        font-family: 'Oswald', sans-serif !important;
+        color: #cc3333;
+        font-weight: normal;
+        line-height: 50px;
+        margin-top: 0;
+        margin-bottom: 40px;
+        position: relative;
+        display: block;
+    }
+
+    .text-zone p {
+        font-size: 20px;
+        line-height: 150%;
+        color: #ffffff;
+        font-family: 'Oswald', sans-serif !important;
+        font-weight: 300;
+        position:relative;
+        display:block;
+    }
+
+.skills-charts {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 54%;
+    height: 100%;
+    justify-content: flex-start;
+    padding-left: 200px;
+    align-items: center;
+    display: flex;
+}
+
+.skill-title:hover{
+    color:#cc3333;
+}
+
+/*--------------------About Page--------------------*/
+
+#aboutpage-container {
+    box-sizing: border-box;
+    margin-left:auto;
+    
+    width:90%;
+    margin-left:60px;
+}
+
+    #aboutpage-container h1 {
+        font-size: 60px;
+        text-align: center;
+        color: white;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        letter-spacing: 4px;
+    }
+
+        #aboutpage-container h1:hover {
+            color: #cc3333;
+        }
+
+    #aboutpage-container p {
+        text-align:center;
+    }
+
+
+.pgUp {
+    position: fixed;
+    right: 60px;
+    bottom: 50px;
+    background: url(logo.png);
+    text-decoration: none;
+    width: 50px;
+    height: 70px;
 }
