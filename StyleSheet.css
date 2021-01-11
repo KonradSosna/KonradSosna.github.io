@@ -6,6 +6,18 @@
     font-family: 'Oswald', sans-serif !important;
 }
 
+#c {
+    background: #202020;
+    display: block;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -999;
+}
+
 /*--------------------Navigation Bar--------------------*/
 
 #navbar {
@@ -194,14 +206,14 @@ h1 span{
 }
 
     .contactpage-container .content {
-        width: 1200px;
+        max-width: 1200px;
         padding: 50px 20px;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         display: flex;
         border-radius: 60px;
-        background-color: #151515;
+        background-color: #404040;
         margin-left: auto;
         margin-right: auto;
         -webkit-box-shadow: -3px 0px 21px 6px rgba(0,0,0,0.75);
@@ -212,6 +224,8 @@ h1 span{
 .contactdiv {
     float: left;
     height: 450px;
+    box-sizing:border-box;
+    overflow:hidden;
 }
 
     .contactdiv:first-child {
@@ -225,10 +239,6 @@ h1 span{
         text-align: center;
     }
 
-.map {
-    float: left;
-    height:450px;
-}
 
 input[type=text] {
     outline: none;
@@ -386,7 +396,7 @@ input[type=text] {
         }
 
     #aboutpage-container p {
-        text-align:center;
+        text-align:left;
     }
 
 
