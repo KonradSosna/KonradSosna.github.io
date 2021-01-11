@@ -8,12 +8,33 @@
     width: 200px;
     height: 140px;
     position: relative;
-    transition: opacity 2s ease;
 }
 
-.pre-finnish {
-    opacity:0;
+.pre {
+    height: 100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: "Roboto", Arial;
+    margin: 0;
+    padding: 0;
+    
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:99;
+}
+
+.pre-finnish { 
+    opacity:1;
     pointer-events:none;
+}
+
+.pre-start {
+    opacity: 0;
+    pointer-events: none;
 }
 
     .loader1:before, .loader:after {
@@ -274,18 +295,6 @@ html {
     box-sizing: border-box;
 }
 
-
-.pre {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #202020;
-    font-family: "Roboto", Arial;
-    margin:-12px;
-    padding:0;
-    box-sizing:border-box;
-}
 
     .pre .dribbble {
         position: fixed;

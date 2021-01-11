@@ -182,6 +182,7 @@ h1 span{
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    
 }
 
     .contactpage-container .content {
@@ -344,6 +345,7 @@ input[type=text] {
     padding-left: 200px;
     align-items: center;
     display: flex;
+    overflow:hidden;
 }
 
 .skill-title:hover{
@@ -355,7 +357,7 @@ input[type=text] {
 #aboutpage-container {
     box-sizing: border-box;
     margin-left:auto;
-    
+    height:100%;
     width:90%;
     margin-left:60px;
 }
@@ -371,7 +373,8 @@ input[type=text] {
     }
 
         #aboutpage-container h1:hover {
-            color: #cc3333;
+            color: #cc3333!important;
+            cursor:pointer;
         }
 
     #aboutpage-container p {
@@ -379,12 +382,44 @@ input[type=text] {
     }
 
 
-.pgUp {
-    position: fixed;
-    right: 60px;
-    bottom: 50px;
-    background: url(logo.png);
-    text-decoration: none;
+#button {
+    display: inline-block;
+    background-color: #cc3333;
     width: 50px;
-    height: 70px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 98;
 }
+
+    #button::after {
+        content: "UP";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 2em;
+        line-height: 50px;
+        color: #fff;
+    }
+
+    #button:hover {
+        cursor: pointer;
+        background-color: #333;
+        -webkit-box-shadow: 0px 0px 15px 4px rgba(204,51,51,0.7);
+        -moz-box-shadow: 0px 0px 15px 4px rgba(204,51,51,0.7);
+        box-shadow: 0px 0px 15px 4px rgba(204,51,51,0.7);
+    }
+
+    #button:active {
+        background-color: #555;
+    }
+
+    #button.show {
+        opacity: 1;
+        visibility: visible;
+    }
