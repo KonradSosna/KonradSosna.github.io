@@ -1,24 +1,34 @@
 ﻿$(document).ready(function () {
 
      // hover button animation shake 
-    $('.button').hover(function () {
-                $(this).addClass('animate__animated animate__headShake');
-            }, function () {
+    $('.button').hover(
+        function () {
+        $(this).addClass('animate__animated animate__headShake');
+        },
+        function () {
+            setTimeout(function () {
                 $(this).removeClass('animate__animated animate__headShake');
-    });
+            }.bind(this), 1000)
+        }
+    );
 
-     // hover letters animation shake
-    $('span').hover(function () {
-                $(this).addClass('animate__animated animate__headShake');
-            }, function () {
-                $(this).removeClass('animate__animated animate__headShake');
-    });
+    // hover letters animation shake
+    $('span').hover(
+        function () {
+            $(this).addClass('animate__animated animate__rubberBand');
+        },
+        function () {
+            setTimeout(function () {
+                $(this).removeClass('animate__animated animate__rubberBand');
+            }.bind(this), 1000)
+        }
+    );
 
     // hover letters color red
-    let redletters = document.getElementById("title");
+    var redletters = document.getElementById("title");
     if (redletters) { //prevents error on site without hovered redletters
     redletters.addEventListener("mouseover", function (event) {
-        event.target.style.color = "red";
+        event.target.style.color = "#cc3333";
     });    }
 
     let redletter = document.getElementById("H");
@@ -26,7 +36,7 @@
     redletters.addEventListener("mouseout", function (event) {
         setTimeout(function () {
             event.target.style.color = "";
-            redletter.style.color = "red";
+            redletter.style.color = "#cc3333";
         }, 200);
     });    }
 
@@ -51,18 +61,6 @@ setTimeout(function () {
     $('.button').fadeIn('slow');
 }, 1000);
 
-// page loader slide right
-window.addEventListener('load', () => {
-    const loader = document.querySelector('.pre');
-    loader.classList.add('animate__slideOutRight');
-
-    setTimeout(function () {
-        loader.classList.remove('animate__slideOutRight');
-        loader.classList.add('pre-start');
-    }, 1000);
-
-});
-
 //about page scrollup button
 var btn = $('#button');
 $(window).scroll(function () {
@@ -77,3 +75,6 @@ btn.on('click', function (e) {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, '300');
 });
+
+
+
