@@ -12,9 +12,7 @@
     <link href="css/about.css" rel="stylesheet" type="text/css" /><!-- about site css -->
 
     <!-- JS files -->
-    <script defer src="script/main.js"></script>
     <script defer src="script/pagetrans.js"></script>
-    <script defer src="script/matrix.js"></script>
 
     <!-- Fonts files -->
     <link rel="stylesheet" href="fontello/css/fontello.css" type="text/css" />
@@ -43,7 +41,7 @@
                 <path id="steamL" d="M17 1C17 1 17 4.5 14 6.5C11 8.5 11 12 11 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="var(--secondary)"></path>
                 <path id="steamR" d="M21 6C21 6 21 8.22727 19 9.5C17 10.7727 17 13 17 13" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
-            <div style="padding-right:25px;">Loading</div>
+            <div class="loading-screen-aniation">Loading</div>
                 
         </div>
     </div>
@@ -122,16 +120,14 @@
                 </div>
 
                 <br />
-                <a href="contact.html" class="navlink animate__animated animate__fadeIn">
+                <a href="contact.html" class="navlink animate-this">
                     <input type="submit" class="button" value="Contact me" />
                 </a>
 
             </main>
         </div>
+        <canvas id="c"></canvas>
     </div>
-
-    <canvas id="c"></canvas>
-
 
 </body>
 </html>

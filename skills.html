@@ -10,10 +10,9 @@
     <!-- Css files -->
     <link href="css/main.css" rel="stylesheet" type="text/css" /><!-- main css -->
     <link href="css/about.css" rel="stylesheet" type="text/css" /><!-- about site css -->
+
     <!-- JS files -->
-    <script defer src="script/main.js"></script>
     <script defer src="script/pagetrans.js"></script>
-    <script defer src="script/matrix.js"></script>
 
     <!-- Fonts files -->
     <link rel="stylesheet" href="fontello/css/fontello.css" type="text/css" />
@@ -42,7 +41,7 @@
                 <path id="steamL" d="M17 1C17 1 17 4.5 14 6.5C11 8.5 11 12 11 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="var(--secondary)"></path>
                 <path id="steamR" d="M21 6C21 6 21 8.22727 19 9.5C17 10.7727 17 13 17 13" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
-            <div style="padding-right:25px;">Loading</div>
+            <div class="loading-screen-aniation">Loading</div>
 
         </div>
     </div>
@@ -78,16 +77,16 @@
 
     <main data-barba="container" data-barba-namespace="skills">
         <div class="skillspage-container">
-                <div class="text-zone animate__animated animate__bounceInLeft">
+            <div class="text-zone animate__animated animate__bounceInLeft">
 
-                    <h1><span style="color:#cc3333;cursor:pointer;">Skills &#038; Experience</span></h1>
+                <h1><span style="color:#cc3333;cursor:pointer;">Skills &#038; Experience</span></h1>
 
 
-                    <p><span style="cursor:pointer;">The main area of my expertise is front end development (client side of the web).</span></p>
-                    <p><span style="cursor:pointer;">HTML, CSS, JS (TypeScript), building small and medium web apps with Angular 2+, custom plugins, features, animations, and coding interactive layouts.</span></p>
-                    <p><span style="cursor:pointer;">I have also full-stack developer experience with open source CMS like (WordPress, Drupal, Magento, Keystone.js and other)</span></p>
+                <p><span style="cursor:pointer;">The main area of my expertise is front end development (client side of the web).</span></p>
+                <p><span style="cursor:pointer;">HTML, CSS, JS (TypeScript), building small and medium web apps with Angular 2+, custom plugins, features, animations, and coding interactive layouts.</span></p>
+                <p><span style="cursor:pointer;">I have also full-stack developer experience with open source CMS like (WordPress, Drupal, Magento, Keystone.js and other)</span></p>
 
-                </div>
+            </div>
 
             <aside>
                 <div class="skills-charts animate__animated animate__bounceInLeft" style="z-index:-999;">
@@ -163,9 +162,8 @@
                 </div>
             </aside>
         </div>
-    </main>
-      
         <canvas id="c"></canvas>
-    
+    </main>
+
 </body>
 </html>

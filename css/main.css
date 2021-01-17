@@ -300,31 +300,29 @@ h1 span{
 /*--------------------Contact Page--------------------*/
 
 .contactpage-container {
-    margin-left: 60px;
-    width:calc(100%-60px);
+    
+    width: calc(100%-60px);
     height: 100vh;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     display: flex;
-    box-sizing:border-box;
+    flex-direction: row;
+    box-sizing: border-box;
+    overflow:hidden;
 }
 
-    .contactpage-container .content {
-        display: flex;
-        margin-left: 60px;
-    }
-
 .contactdiv {
-    height: 100vh;
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 50%;
 }
 
     .contactdiv:first-child {
-        margin-right: 40px;
+        margin-left:70px;
     }
 
     .contactdiv h1 {
@@ -343,9 +341,9 @@ input[type=text] {
     margin-right: 5px;
     background-color: #303030;
     color: white;
-    outline: none;
     border: none;
     font-family: 'Oswald', sans-serif !important;
+    font-size:20px;
 }
 
 #subject {
@@ -624,14 +622,14 @@ input[type=text] {
         }
 
     .contactpage-container {
-        margin-top: 20px;
+        margin-top: 80px;
         margin-left:unset;
-        height: unset;
         justify-content: space-evenly;
         align-items: center;
         display: flex;
         box-sizing: border-box;
         flex-direction: column;
+        height:100%;
     }
 
         .contactpage-container .contactdiv{
@@ -645,7 +643,12 @@ input[type=text] {
         }
 
     .contactdiv:first-child {
-        margin-right:unset;
+        margin-right: unset;
+        margin-left: unset;
+    }
+
+    .contactdiv:last-child {
+        margin-bottom: 50px;
     }
 }
 
@@ -834,10 +837,11 @@ svg {
  /*           Page transitions           */
 /*                                      */
 
+/*--------------------Transition Screen--------------------*/
 .loading-screen {
     position: relative;
     padding: 0;
-    background-color: #303030;
+    background-color: #151515;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -845,9 +849,9 @@ svg {
     flex-direction: column;
     box-sizing: border-box;
     font-size: 25px;
-    width: 100%; 
-    left:-100%;
-    overflow:hidden;
+    width: 100%;
+    left: -100%;
+    pointer-events: none;
 }
 
 .load-container {
@@ -859,6 +863,15 @@ svg {
     overflow: hidden;
     z-index: 999;
     pointer-events: none;
+}
+
+
+
+/*--------------------Transition Screen Loagin Animation--------------------*/
+
+.loading-screen-aniation {
+    color: #cc3333;
+    padding-right: 25px;
 }
 
 svg.tea {
