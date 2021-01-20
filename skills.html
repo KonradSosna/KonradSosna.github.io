@@ -24,6 +24,7 @@
     <script src="script/jquery-3.5.1.min.js"></script>
     <script defer src="https://unpkg.com/@barba/core"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <script defer src='https://codepen.io/juliangarnier/pen/75efae7724dbc3c055e918057fc4aca5.js'></script>
 
     <!-- Browser logo -->
     <link rel="icon" href="logo.png">
@@ -34,7 +35,7 @@
     <div class="load-container">
         <div class="loading-screen">
 
-            <svg class="tea" width="137" height="148" viewbox="0 0 37 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="tea" width="137" height="148" viewBox="0 0 37 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M27.0819 17H3.02508C1.91076 17 1.01376 17.9059 1.0485 19.0197C1.15761 22.5177 1.49703 29.7374 2.5 34C4.07125 40.6778 7.18553 44.8868 8.44856 46.3845C8.79051 46.79 9.29799 47 9.82843 47H20.0218C20.639 47 21.2193 46.7159 21.5659 46.2052C22.6765 44.5687 25.2312 40.4282 27.5 34C28.9757 29.8188 29.084 22.4043 29.0441 18.9156C29.0319 17.8436 28.1539 17 27.0819 17Z" stroke="var(--secondary)" stroke-width="2"></path>
                 <path d="M29 23.5C29 23.5 34.5 20.5 35.5 25.4999C36.0986 28.4926 34.2033 31.5383 32 32.8713C29.4555 34.4108 28 34 28 34" stroke="var(--secondary)" stroke-width="2"></path>
                 <path id="teabag" fill="var(--secondary)" fill-rule="evenodd" clip-rule="evenodd" d="M16 25V17H14V25H12C10.3431 25 9 26.3431 9 28V34C9 35.6569 10.3431 37 12 37H18C19.6569 37 21 35.6569 21 34V28C21 26.3431 19.6569 25 18 25H16ZM11 28C11 27.4477 11.4477 27 12 27H18C18.5523 27 19 27.4477 19 28V34C19 34.5523 18.5523 35 18 35H12C11.4477 35 11 34.5523 11 34V28Z"></path>
@@ -46,38 +47,40 @@
         </div>
     </div>
 
-    <div id="navbar">
+    <div data-barba="container" data-barba-namespace="skills">
+        <div id="navbar">
 
-        <a href="index.html" title="Home Page">
-            <div id="logo">
-                <img src="logo.png" width="60" height="60" alt="web developer, personal page" />
-            </div>
-        </a>
+            <header>
+                <a id="logo" href="index.html" rel="index" title="Home Page">
+                    <img src="logo.png" width="60" height="60" alt="web developer, personal page" />
+                </a>
+            </header>
 
-        <nav class="sitenav">
-            <ul>
-                <li id="1"><a href="index.html" class="navlink" title="home page"><i class="icon-home"></i></a></li>
-                <li id="2"><a href="about.html" class="navlink" title="about me"><i class="icon-user"></i></a></li>
-                <li id="3"><a href="skills.html" class="navlink" title="skills"><i class="icon-eye"></i></a></li>
-                <li id="4"><a href="contact.html" class="navlink" title="contact"><i class="icon-mail"></i></a></li>
-            </ul>
-        </nav>
+            <nav class="sitenav">
+                <ul>
+                    <li id="1"><a href="index.html" class="navlink" title="home page"><i class="icon-home"></i></a></li>
+                    <li id="2"><a href="about.html" class="navlink" title="about me"><i class="icon-user"></i></a></li>
+                    <li id="3"><a href="#" class="navlink" title="skills"><i class="icon-eye"></i></a></li>
+                    <li id="4"><a href="contact.html" class="navlink" title="contact"><i class="icon-mail"></i></a></li>
+                </ul>
+            </nav>
 
-        <footer class="social">
-            <a href="https://www.facebook.com/konrad.sosna/" id="2" class="sociallink" target="_blank" title="My Facebook Profile"><div><i class="icon-facebook-rect"></i></div></a>
+            <footer class="social">
+                <a href="https://www.facebook.com/konrad.sosna/" id="2" class="sociallink" target="_blank" title="My Facebook Profile"><div><i class="icon-facebook-rect"></i></div></a>
 
-            <a href="https://github.com/KonradSosna" class="sociallink" target="_blank" title="My GitHub Profile"><div class="GH"><i class="icon-git-squared"></i></div></a>
+                <a href="https://github.com/KonradSosna" class="sociallink" target="_blank" title="My GitHub Profile"><div class="GH"><i class="icon-git-squared"></i></div></a>
 
-            <a href="https://www.linkedin.com/in/konrad-sosna-223257201/" class="sociallink" target="_blank" title="My LinkedIn Profile"><div class="LI"><i class="icon-linkedin-rect"></i></div></a>
+                <a href="https://www.linkedin.com/in/konrad-sosna-223257201/" class="sociallink" target="_blank" title="My LinkedIn Profile"><div class="LI"><i class="icon-linkedin-rect"></i></div></a>
 
-            <a href="contact.html" class="sociallink" target="_blank" alt="lol" title="Mój mail"><div class="JJ"><i class="icon-mail"></i></div></a>
-        </footer>
+                <a href="contact.html" class="sociallink" target="_blank" alt="lol" title="Mój mail"><div class="JJ"><i class="icon-mail"></i></div></a>
+            </footer>
 
-    </div>
+        </div>
 
-    <main data-barba="container" data-barba-namespace="skills">
+        
         <div class="skillspage-container">
-            <div class="text-zone animate__animated animate__bounceInLeft">
+
+            <main class="text-zone animate__animated animate__bounceInLeft">
 
                 <h1><span style="color:#cc3333;cursor:pointer;">Skills &#038; Experience</span></h1>
 
@@ -85,85 +88,51 @@
                 <p><span style="cursor:pointer;">The main area of my expertise is Front-End development (client side of the web).</span></p>
                 <p><span style="cursor:pointer;">Building small and medium web apps with HTML, CSS, JS (TypeScript), Bootstrap, React, Angular and many libraries</span></p>
                 <p><span style="cursor:pointer;">I have also full-stack developer experience (WordPress, PHP, Node, SQL) but I am still learning Back-End</span></p>
+                <p><span style="cursor:pointer;">For more information <a href="./contact.html" class="navlink" style="color:#cc2222;font-weight:700;">contact me</a> or download my <a href="./CV.pdf" download="Konrad Sosna CV" target="_blank" title="Download my CV" class="navlink" style="color:#cc2222;font-weight:700;">CV</a></span></p>
 
-            </div>
+            </main>
 
             <aside>
-                <div class="skills-charts animate__animated animate__bounceInLeft" style="z-index:-999;">
+                <div class="skills-charts animate__animated animate__bounceInLeft">
 
-                    <svg width="500" height="500" style="background-color:transparent; position: relative; z-index:-999;">
-
-                        <defs>
-                            <radialGradient id="sun" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                                <stop offset="0%" style="stop-color:rgb(255,255,0);" />
-                                <stop offset="100%" style="stop-color:#202020;" />
-                            </radialGradient>
-                        </defs>
-
-                        <circle cx="48%" cy="48%" r="40" stroke="white" stroke-width="0" fill="url(#sun)" />
-                        <circle cx="48%" cy="48%" r="28" stroke="white" stroke-width="0" fill="yellow" />
-
-                        <g class="asteroidSVG">
+                    <div class="sphere-animation">
+                        <svg class="sphere" viewBox="0 0 440 440" stroke="rgba(80,80,80,.35)">
                             <defs>
-                                <linearGradient id="asteriodTail" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color:rgb(255,0,0);" />
-                                    <stop offset="80%" style="stop-color:rgb(0,0,0);" />
-                                    <stop offset="100%" style="stop-color:rgb(0,0,0);" />
+                                <linearGradient id="sphereGradient" x1="5%" x2="5%" y1="0%" y2="15%">
+                                    <stop stop-color="#373734" offset="0%" />
+                                    <stop stop-color="#242423" offset="50%" />
+                                    <stop stop-color="#0D0D0C" offset="100%" />
                                 </linearGradient>
                             </defs>
-
-                            <ellipse cx="6%" cy="7%" rx="25" ry="9" fill="url(#asteriodTail)" class="asteroidTail" />
-                            <circle cx="5%" cy="5%" r="10" stroke="0" fill="#362d01" class="asteroid" />
-                        </g>
-
-                        <circle cx="8%" cy="8%" r="1" stroke="0" fill="white" class="star1" />
-                        <circle cx="16%" cy="12%" r="2" stroke="0" fill="white" class="star2" />
-                        <circle cx="86%" cy="16%" r="1" stroke="0" fill="white" class="star1" />
-                        <circle cx="6%" cy="76%" r="1" stroke="0" fill="white" class="star2" />
-                        <circle cx="19%" cy="84%" r="2" stroke="0" fill="white" class="star1" />
-                        <circle cx="85%" cy="86%" r="1" stroke="0" fill="white" class="star2" />
-                        <circle cx="96%" cy="7%" r="1" stroke="0" fill="white" class="star1" />
-                        <circle cx="82%" cy="10%" r="1" stroke="0" fill="white" class="star2" />
-                        <circle cx="94%" cy="48%" r="3" stroke="0" fill="white" class="star1" />
-                        <circle cx="82%" cy="80%" r="1" stroke="0" fill="white" class="star2" />
-                        <circle cx="58%" cy="93%" r="1" stroke="0" fill="white" class="star1" />
-
-
-                        <circle cx="48%" cy="48%" r="40" stroke="white" stroke-width="1" fill-opacity="0" />
-                        <circle cx="48%" cy="48%" r="4" stroke-width="0" fill="white" class="anim1" />
-
-                        <circle cx="48%" cy="48%" r="60" stroke="white" stroke-width="1" fill-opacity="0" />
-                        <circle cx="48%" cy="48%" r="5" stroke-width="0" fill="#7A4C27" class="anim2" />
-
-                        <circle cx="48%" cy="48%" r="80" stroke="white" stroke-width="1" fill-opacity="0" />
-                        <circle cx="48%" cy="48%" r="8" stroke-width="0" fill="RGB(111,160,78)" class="anim3" />
-
-                        <svg class="anim3">
-                            <circle cx="48%" cy="48%" r="12" stroke="white" stroke-width="1" fill-opacity="0" />
-                            <circle cx="48%" cy="48%" r="3" stroke="white" stroke-width="0" fill="white" class="anim3-2" />
+                            <path d="M361.604 361.238c-24.407 24.408-51.119 37.27-59.662 28.727-8.542-8.543 4.319-35.255 28.726-59.663 24.408-24.407 51.12-37.269 59.663-28.726 8.542 8.543-4.319 35.255-28.727 59.662z" />
+                            <path d="M360.72 360.354c-35.879 35.88-75.254 54.677-87.946 41.985-12.692-12.692 6.105-52.067 41.985-87.947 35.879-35.879 75.254-54.676 87.946-41.984 12.692 12.692-6.105 52.067-41.984 87.946z" />
+                            <path d="M357.185 356.819c-44.91 44.91-94.376 68.258-110.485 52.149-16.11-16.11 7.238-65.575 52.149-110.485 44.91-44.91 94.376-68.259 110.485-52.15 16.11 16.11-7.239 65.576-52.149 110.486z" />
+                            <path d="M350.998 350.632c-53.21 53.209-111.579 81.107-130.373 62.313-18.794-18.793 9.105-77.163 62.314-130.372 53.209-53.21 111.579-81.108 130.373-62.314 18.794 18.794-9.105 77.164-62.314 130.373z" />
+                            <path d="M343.043 342.677c-59.8 59.799-125.292 91.26-146.283 70.268-20.99-20.99 10.47-86.483 70.269-146.282 59.799-59.8 125.292-91.26 146.283-70.269 20.99 20.99-10.47 86.484-70.27 146.283z" />
+                            <path d="M334.646 334.28c-65.169 65.169-136.697 99.3-159.762 76.235-23.065-23.066 11.066-94.593 76.235-159.762s136.697-99.3 159.762-76.235c23.065 23.065-11.066 94.593-76.235 159.762z" />
+                            <path d="M324.923 324.557c-69.806 69.806-146.38 106.411-171.031 81.76-24.652-24.652 11.953-101.226 81.759-171.032 69.806-69.806 146.38-106.411 171.031-81.76 24.652 24.653-11.953 101.226-81.759 171.032z" />
+                            <path d="M312.99 312.625c-73.222 73.223-153.555 111.609-179.428 85.736-25.872-25.872 12.514-106.205 85.737-179.428s153.556-111.609 179.429-85.737c25.872 25.873-12.514 106.205-85.737 179.429z" />
+                            <path d="M300.175 299.808c-75.909 75.909-159.11 115.778-185.837 89.052-26.726-26.727 13.143-109.929 89.051-185.837 75.908-75.908 159.11-115.778 185.837-89.051 26.726 26.726-13.143 109.928-89.051 185.836z" />
+                            <path d="M284.707 284.34c-77.617 77.617-162.303 118.773-189.152 91.924-26.848-26.848 14.308-111.534 91.924-189.15C265.096 109.496 349.782 68.34 376.63 95.188c26.849 26.849-14.307 111.535-91.923 189.151z" />
+                            <path d="M269.239 267.989c-78.105 78.104-163.187 119.656-190.035 92.807-26.849-26.848 14.703-111.93 92.807-190.035 78.105-78.104 163.187-119.656 190.035-92.807 26.849 26.848-14.703 111.93-92.807 190.035z" />
+                            <path d="M252.887 252.52C175.27 330.138 90.584 371.294 63.736 344.446 36.887 317.596 78.043 232.91 155.66 155.293 233.276 77.677 317.962 36.521 344.81 63.37c26.85 26.848-14.307 111.534-91.923 189.15z" />
+                            <path d="M236.977 236.61C161.069 312.52 77.867 352.389 51.14 325.663c-26.726-26.727 13.143-109.928 89.052-185.837 75.908-75.908 159.11-115.777 185.836-89.05 26.727 26.726-13.143 109.928-89.051 185.836z" />
+                            <path d="M221.067 220.7C147.844 293.925 67.51 332.31 41.639 306.439c-25.873-25.873 12.513-106.206 85.736-179.429C200.6 53.786 280.931 15.4 306.804 41.272c25.872 25.873-12.514 106.206-85.737 179.429z" />
+                            <path d="M205.157 204.79c-69.806 69.807-146.38 106.412-171.031 81.76-24.652-24.652 11.953-101.225 81.759-171.031 69.806-69.807 146.38-106.411 171.031-81.76 24.652 24.652-11.953 101.226-81.759 171.032z" />
+                            <path d="M189.247 188.881c-65.169 65.169-136.696 99.3-159.762 76.235-23.065-23.065 11.066-94.593 76.235-159.762s136.697-99.3 159.762-76.235c23.065 23.065-11.066 94.593-76.235 159.762z" />
+                            <path d="M173.337 172.971c-59.799 59.8-125.292 91.26-146.282 70.269-20.991-20.99 10.47-86.484 70.268-146.283 59.8-59.799 125.292-91.26 146.283-70.269 20.99 20.991-10.47 86.484-70.269 146.283z" />
+                            <path d="M157.427 157.061c-53.209 53.21-111.578 81.108-130.372 62.314-18.794-18.794 9.104-77.164 62.313-130.373 53.21-53.209 111.58-81.108 130.373-62.314 18.794 18.794-9.105 77.164-62.314 130.373z" />
+                            <path d="M141.517 141.151c-44.91 44.91-94.376 68.259-110.485 52.15-16.11-16.11 7.239-65.576 52.15-110.486 44.91-44.91 94.375-68.258 110.485-52.15 16.109 16.11-7.24 65.576-52.15 110.486z" />
+                            <path d="M125.608 125.241c-35.88 35.88-75.255 54.677-87.947 41.985-12.692-12.692 6.105-52.067 41.985-87.947C115.525 43.4 154.9 24.603 167.592 37.295c12.692 12.692-6.105 52.067-41.984 87.946z" />
+                            <path d="M109.698 109.332c-24.408 24.407-51.12 37.268-59.663 28.726-8.542-8.543 4.319-35.255 28.727-59.662 24.407-24.408 51.12-37.27 59.662-28.727 8.543 8.543-4.319 35.255-28.726 59.663z" />
                         </svg>
-
-                        <circle cx="48%" cy="48%" r="100" stroke="white" stroke-width="1" fill-opacity="0" />
-                        <circle cx="48%" cy="48%" r="7" stroke-width="0" fill="RGB(128,23,12)" class="anim4" />
-
-                        <circle cx="48%" cy="48%" r="125" stroke="white" stroke-width="1" fill-opacity="0" />
-                        <circle cx="48%" cy="48%" r="18" stroke-width="0" fill="RGB(226,150,71)" class="anim5" />
-
-                        <circle cx="48%" cy="48%" r="150" stroke="white" stroke-width="1" fill-opacity="0" />
-                        <circle cx="48%" cy="48%" r="12" stroke-width="0" fill="RGB(203,170,134)" class="anim6" />
-
-                        <circle cx="48%" cy="48%" r="180" stroke="white" stroke-width="1" fill-opacity="0" />
-                        <circle cx="48%" cy="48%" r="9" stroke-width="0" fill="RGB(61,108,192)" class="anim7" />
-
-                        <circle cx="48%" cy="48%" r="200" stroke="white" stroke-width="1" fill-opacity="0" />
-                        <circle cx="48%" cy="48%" r="14" stroke-width="0" fill="RGB(23,169,173)" class="anim8" />
-                    </svg>
+                    </div>
 
                 </div>
             </aside>
         </div>
         <canvas id="c"></canvas>
-    </main>
+    </div>
 
 </body>
 </html>

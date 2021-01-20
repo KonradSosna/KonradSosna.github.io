@@ -32,12 +32,11 @@ function pageTransition() {
     tl.from(".animate-this", { duration: 1, y: 30, opacity: 0, stagger: 0.4, delay: 0.2 });
 }*/
 
-function contentAnimation() {
+function scriptLoader() {
     $.getScript('./script/main.js');
     $.getScript('./script/matrix.js');
+    $.getScript('./script/sphere.js');
 }
-
-
 
 $(function () {
     barba.init({
@@ -59,11 +58,11 @@ $(function () {
                 },
 
                 async enter(data) {
-                    contentAnimation();
+                    scriptLoader();
                 },
 
-                async once(data) {
-                    contentAnimation();
+                 once(data) {
+                    scriptLoader();
                 },
             },
         ],

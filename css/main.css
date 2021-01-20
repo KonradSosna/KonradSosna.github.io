@@ -460,6 +460,25 @@ input[type=text] {
     color:#cc3333;
 }
 
+.sphere-animation {
+    width: 580px;
+    height: 580px;
+}
+
+.sphere path {
+    fill: url(#sphereGradient);
+    stroke-width: 1px;
+    stroke: rgba(80,80,80,.35);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+@media (min-width: 500px) {
+    .sphere path {
+        stroke-width: .4px;
+    }
+}
+
 /*--------------------About Page--------------------*/
 
 #aboutpage-container {

@@ -1,4 +1,4 @@
-﻿$(document).ready(function () {
+﻿function matrix () {
     // geting canvas by id c
     var c = document.getElementById("c");
     var ctx = c.getContext("2d");
@@ -49,4 +49,6 @@
     }
 
     setInterval(draw, 35);
-});
+}
+
+matrix();

@@ -49,12 +49,11 @@
                     width: $(this).data("origWidth")
                 }, 1200);
     });
+
 });
 
 // hide contact button
-document.addEventListener('DOMContentLoaded', function () {
-    $('.button').hide();
-}, false);
+
 
 // fade in contact button delay
 setTimeout(function () {
@@ -62,7 +61,7 @@ setTimeout(function () {
 }, 1000);
 
 //about page scrollup button
-var btn = $('#button');
+var btn = $('.button');
 $(window).scroll(function () {
     if ($(window).scrollTop() > 300) {
         btn.addClass('show');
