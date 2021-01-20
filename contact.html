@@ -11,7 +11,6 @@
     <!-- Css files -->
     <link href="css/main.css" rel="stylesheet" type="text/css" /><!-- main css -->
     <link href="css/about.css" rel="stylesheet" type="text/css" /><!-- about site css -->
-
     <!-- JS files -->
     <script defer src="script/pagetrans.js"></script>
 
@@ -29,6 +28,9 @@
 
     <!-- Browser logo -->
     <link rel="icon" href="logo.png">
+
+    <!-- Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpW1FhsOJREdIGMVTF3AhPRXknXzaCBpw&callback=initMap&libraries=&v=weekly" defer></script>
 
 </head>
 <body data-barba="wrapper">
@@ -97,12 +99,15 @@
                 </form>
             </main>
 
+            <script src="./script/map.js"></script>
+
             <div class="contactdiv animate__animated animate__bounceInLeft">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9485103.626753084!2d8.972121532779289!3d47.718900970432436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa09146aa79d7d%3A0x754da3cae3d36dea!2sCentrum%2C%2071-899%20Szczecin!5e1!3m2!1spl!2spl!4v1610893655201!5m2!1spl!2spl" z-index="-1" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <div id="map-wrap" style="width:100%;height:100%;">
+                    <div id="map" style="height:100%;"></div>
+                </div>
             </div>
 
         </div>
-        <canvas id="c"></canvas>
     </div>
 
 </body>

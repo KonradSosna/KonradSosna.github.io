@@ -35,6 +35,8 @@ function pageTransition() {
 function scriptLoader() {
     $.getScript('./script/main.js');
     $.getScript('./script/matrix.js');
+    $.getScript('./script/map.js');
+    $.getScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyCpW1FhsOJREdIGMVTF3AhPRXknXzaCBpw&callback=initMap&libraries=&v=weekly');
     $.getScript('./script/sphere.js');
 }
 

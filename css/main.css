@@ -403,12 +403,9 @@ input[type=text] {
     }
 }
 
-.contactdiv h1 {
-    margin-left:auto;
-    margin-right:auto;
-    width: 350px;
+#map {
+    height: 100%;
 }
-
 
 /*--------------------Skills Page--------------------*/
 
@@ -471,12 +468,6 @@ input[type=text] {
     stroke: rgba(80,80,80,.35);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-}
-
-@media (min-width: 500px) {
-    .sphere path {
-        stroke-width: .4px;
-    }
 }
 
 /*--------------------About Page--------------------*/
@@ -655,6 +646,7 @@ input[type=text] {
 
         .contactpage-container .contactdiv{
             height:500px;
+            width:500px;
         }
 
         .contactpage-container .content {
@@ -666,10 +658,16 @@ input[type=text] {
     .contactdiv:first-child {
         margin-right: unset;
         margin-left: unset;
+        margin-top: 20px;
+        margin-bottom: 40px;
     }
 
     .contactdiv:last-child {
         margin-bottom: 50px;
+    }
+
+    .sphere path {
+        stroke-width: .4px;
     }
 }
 
