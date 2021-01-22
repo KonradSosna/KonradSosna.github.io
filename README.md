@@ -17,5 +17,5 @@
 
 
 #### Google Maps API
-allows customers to make custom map
+allows customers to make custom map<br>
 ![](https://media.giphy.com/media/1pZsCdcAPBuFz3IT6x/giphy.gif)
