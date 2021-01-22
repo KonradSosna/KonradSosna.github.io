@@ -1,6 +1,6 @@
 # KonradSosna.github.io
 
-#My personal website
+#My personal website  
 `<link>` :[Check it by yourself!](https://konradsosna.github.io/ "My personal website")
 
 ![](https://media.giphy.com/media/Plx6JLzCUp4JFoQoqC/giphy.gif)
