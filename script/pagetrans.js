@@ -46,11 +46,6 @@ $(function () {
 
         transitions: [
             {
-
-                beforeEnter(data) {
-
-                },
-
                 async leave(data) {
                     const done = this.async();
 
@@ -63,7 +58,7 @@ $(function () {
                     scriptLoader();
                 },
 
-                 once(data) {
+                 async once(data) {
                     scriptLoader();
                 },
             },

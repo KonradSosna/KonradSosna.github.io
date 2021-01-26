@@ -122,16 +122,16 @@
 
 
 #homepage-container {
-    position: absolute !important;
-    margin-left: 60px !important;
-    left: 10% !important;
-    top: 50% !important;
-    -webkit-transform: translateY(-50%) !important;
-    -ms-transform: translateY(-50%) !important;
-    transform: translateY(-50%) !important;
-    max-height: 90% !important;
-    color: white !important;
-    min-width: 470px !important;
+    position: absolute;
+    margin-left: 60px;
+    left: 10%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    max-height: 90%;
+    color: white;
+    min-width: 470px;
 }
 
 #test2 {
@@ -407,8 +407,12 @@ input[type=text] {
     height: 100%;
 }
 
-/*--------------------Skills Page--------------------*/
+#map-wrap {
+    width: 100%;
+    height: 100%;
+}
 
+/*--------------------Skills Page--------------------*/
 .skillspage-container {
     width: calc(100%-60px);
     height: 100vh;
