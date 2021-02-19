@@ -1,4 +1,10 @@
-﻿body {
+﻿@font-face {
+    font-family: FontAwesome;
+    font-display: swap;
+    src: url(//use.fontawesome.com/releases/v5.0.7/css/all.css);
+}
+
+body {
     background-color: #202020;
     margin: 0px;
     padding: 0px;
