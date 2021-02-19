@@ -215,6 +215,7 @@ h1 span{
 
 .meter > span {
     display: block;
+    will-change: transform;
     height: 100%;
     -webkit-border-top-right-radius: 8px;
     -webkit-border-bottom-right-radius: 8px;
@@ -241,6 +242,7 @@ h1 span{
     .meter > span:after, .animate > span > span {
         content: "";
         position: absolute;
+        will-change: transform;
         top: 0;
         left: 0;
         bottom: 0;
