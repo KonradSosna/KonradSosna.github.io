@@ -25,9 +25,9 @@
     <script defer src="swup/dist/SwupOverlayTheme.min.js"></script>
     <script defer src="https://codepen.io/juliangarnier/pen/75efae7724dbc3c055e918057fc4aca5.js"></script>
     
-
     <!-- JS files -->
     <script defer src="script/main.js"></script>
+
 
     <!-- Browser logo -->
     <link rel="icon" href="/logo.webp">
@@ -120,5 +120,17 @@
 
     <canvas id="c"></canvas>
 
+    <script src="fontfaceobserver/fontfaceobserver.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        const pacificoObserver = new FontFaceObserver('Font Awesome\ 5 Free');
+        const robotoObserver = new FontFaceObserver('Font Awesome\ 5 Brands');
+
+        Promise.all([
+            pacificoObserver.load(),
+            robotoObserver.load()
+        ]).then(function () {
+            document.documentElement.className += " fonts-loaded";
+        });
+    </script>
 </body>
 </html>

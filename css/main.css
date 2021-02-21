@@ -7,6 +7,13 @@
     src: url("https://use.fontawesome.com/releases/v5.0.7/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("https://use.fontawesome.com/releases/v5.0.7/webfonts/fa-solid-900.woff2") format("woff2"), url("https://use.fontawesome.com/releases/v5.0.7/webfonts/fa-solid-900.woff") format("woff"), url("https://use.fontawesome.com/releases/v5.0.7/webfonts/fa-solid-900.ttf") format("truetype"), url("https://use.fontawesome.com/releases/v5.0.7/webfonts/fa-solid-900.svg#fontawesome") format("svg")
 }
 
+@font-face {
+    font-family: 'Font Awesome\ 5 Brands';
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://use.fontawesome.com/releases/v5.0.7/webfonts/fa-brands-400.woff2") format("woff2")
+}
+
 body {
     background-color: #202020;
     margin: 0px;
@@ -63,9 +70,9 @@ body {
     color: white;
     margin: 20px 0;
 }
-    
 
-.navlink {
+
+html.fonts-loaded .navlink {
     text-decoration: none;
     color: white;
 }
@@ -507,11 +514,14 @@ input[type=text] {
 
 
 #button {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #cc3333;
+    color: white;
+    font-size: 35px;
     width: 50px;
     height: 50px;
-    text-align: center;
     border-radius: 4px;
     position: fixed;
     bottom: 30px;
@@ -520,22 +530,12 @@ input[type=text] {
     opacity: 0;
     visibility: hidden;
     z-index: 98;
-    text-decoration:none;
+    text-decoration: none;
 }
-
-    #button::after {
-        content: "\f062";
-        font-family: 'Font Awesome\ 5 Free';
-        font-weight: 900; /* Fix version 5.0.9 */
-        font-size: 2em;
-        line-height: 50px;
-        color: #fff;
-    }
 
     #button:hover {
         cursor: pointer;
         background-color: #cc7777;
-        
     }
 
     #button:active {
