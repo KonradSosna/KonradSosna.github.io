@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8" />
     <title>Hello! My name is Konrad</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Hi I am a WEB developer and this is my personal website" />
     <meta name="keywords" content="web, developer, html, css, javascript" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.7">
@@ -11,7 +10,19 @@
     <!-- Fonts files -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link defer rel="stylesheet preconnect" href="https://fonts.googleapis.com/css2?family=Oswald&display=swap">
-    <link as="style" rel="stylesheet preload prefetch" href="//use.fontawesome.com/releases/v5.0.7/css/all.css" crossorigin="anonymous">
+
+    <link rel="preload" as="style" crossorigin="anonymous" href="//use.fontawesome.com/releases/v5.0.7/css/all.css" onload="this.rel='stylesheet'" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.0.7/webfonts/fa-solid-900.woff2" />
+
+    <!--<link as="style" rel="stylesheet preload prefetch" href="//use.fontawesome.com/releases/v5.0.7/css/all.css" crossorigin="anonymous">-->
+
+    <style>
+        @font-face {
+            font-family: 'FontAwesome';
+            font-display: swap;
+            src: local('FontAwesome'), url(https://use.fontawesome.com/releases/v5.0.7/webfonts/fa-solid-900.woff2) format('woff2');
+        }
+    </style>
 
     <!-- Css files -->
     <link href="css/main.css" rel="stylesheet" type="text/css" />
@@ -27,7 +38,7 @@
     <script defer src="script/main.js"></script>
 
     <!-- Browser logo -->
-    <link rel="icon" href="logo.webp">
+    <link rel="icon" href="/logo.webp">
 
 </head>
 <body>
@@ -96,12 +107,12 @@
                     </h1>
                 </header>
 
-                <div id="test2" class="animate__animated animate__bounceIn" style="animation-delay:1s">
+                <div class="test2 animate__animated animate__bounceIn" style="animation-delay:1s">
                     <div class="caption">Front-End Developer</div>
                     <div style="display:flex;"><div class="bar"><div class="meter"><span style="width: 100%"></span></div></div><div class="bar">Completed&nbsp;&nbsp;&nbsp;</div></div>
                 </div>
 
-                <div id="test2" class="animate__animated animate__bounceIn" style="animation-delay:1s">
+                <div class="test2 animate__animated animate__bounceIn" style="animation-delay:1s">
                     <div class="caption">Back-End Developer</div>
                     <div style="display:flex;"><div class="bar"><div class="meter"><span style="width: 60%"></span></div></div><div class="bar">In Progress ...</div></div>
                 </div>
@@ -166,32 +177,6 @@
             });
         }
 
-        var imgSection = document.querySelector('section');
-
-        window.onload = function () {
-
-            // load each set of image, alt text, name and caption
-            for (var i = 0; i <= images.length - 1; i++) {
-                imgLoad(images[i]).then(function (arrayResponse) {
-
-                    var myImage = document.createElement('img');
-                    var myFigure = document.createElement('figure');
-                    var myCaption = document.createElement('caption');
-                    var imageURL = window.URL.createObjectURL(arrayResponse[0]);
-
-                    myImage.src = imageURL;
-                    myImage.setAttribute('alt', arrayResponse[1].alt);
-                    myCaption.innerHTML = '<strong>' + arrayResponse[1].name + '</strong>: Taken by ' + arrayResponse[1].credit;
-
-                    imgSection.appendChild(myFigure);
-                    myFigure.appendChild(myImage);
-                    myFigure.appendChild(myCaption);
-
-                }, function (Error) {
-                    console.log(Error);
-                });
-            }
-        };
     </script>
 
 </body>
