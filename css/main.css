@@ -88,7 +88,6 @@ body {
 .sociallink {
     text-decoration: none;
     color: #333333;
-    margin-right: 10px;
 }
 
     .sociallink:hover {
@@ -607,6 +606,10 @@ input[type=text] {
         justify-content: center;
         align-items: center;
         padding: 0;
+    }
+
+    .sociallink {
+        margin-right: 10px;
     }
 
     #homepage-container {
