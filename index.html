@@ -120,17 +120,5 @@
 
     <canvas id="c"></canvas>
 
-    <script src="fontfaceobserver/fontfaceobserver.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        const pacificoObserver = new FontFaceObserver('Font Awesome\ 5 Free');
-        const robotoObserver = new FontFaceObserver('Font Awesome\ 5 Brands');
-
-        Promise.all([
-            pacificoObserver.load(),
-            robotoObserver.load()
-        ]).then(function () {
-            document.documentElement.className += " fonts-loaded";
-        });
-    </script>
 </body>
 </html>
