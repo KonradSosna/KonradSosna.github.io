@@ -1,17 +1,28 @@
 ﻿@font-face {
-    font-family: 'Font Awesome\ 5 Free';
+    font-family: Font Awesome\ 5 Brands;
+    font-display:swap;
     font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url("https://use.fontawesome.com/releases/v5.0.7/webfonts/fa-solid-900.eot");
-    src: url("https://use.fontawesome.com/releases/v5.0.7/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("https://use.fontawesome.com/releases/v5.0.7/webfonts/fa-solid-900.woff2") format("woff2"), url("https://use.fontawesome.com/releases/v5.0.7/webfonts/fa-solid-900.woff") format("woff"), url("https://use.fontawesome.com/releases/v5.0.7/webfonts/fa-solid-900.ttf") format("truetype"), url("https://use.fontawesome.com/releases/v5.0.7/webfonts/fa-solid-900.svg#fontawesome") format("svg")
+    font-weight: 400;
+    src: url(../webfonts/fa-brands-400.eot);
+    src: url(../webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-brands-400.woff2) format("woff2"),url(../webfonts/fa-brands-400.woff) format("woff"),url(../webfonts/fa-brands-400.ttf) format("truetype"),url(../webfonts/fa-brands-400.svg#fontawesome) format("svg")
 }
 
 @font-face {
-    font-family: 'Font Awesome\ 5 Brands';
-    font-weight: 400;
+    font-family: Font Awesome\ 5 Free;
     font-display: swap;
-    src: url("https://use.fontawesome.com/releases/v5.0.7/webfonts/fa-brands-400.woff2") format("woff2")
+    font-style: normal;
+    font-weight: 400;
+    src: url(../webfonts/fa-regular-400.eot);
+    src: url(../webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-regular-400.woff2) format("woff2"),url(../webfonts/fa-regular-400.woff) format("woff"),url(../webfonts/fa-regular-400.ttf) format("truetype"),url(../webfonts/fa-regular-400.svg#fontawesome) format("svg")
+}
+
+@font-face {
+    font-family: Font Awesome\ 5 Free;
+    font-display: swap;
+    font-style: normal;
+    font-weight: 900;
+    src: url(../webfonts/fa-solid-900.eot);
+    src: url(../webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(../webfonts/fa-solid-900.woff2) format("woff2"),url(../webfonts/fa-solid-900.woff) format("woff"),url(../webfonts/fa-solid-900.ttf) format("truetype"),url(../webfonts/fa-solid-900.svg#fontawesome) format("svg")
 }
 
 body {
@@ -72,7 +83,8 @@ body {
 }
 
 
-html.fonts-loaded .navlink {
+.navlink {
+    font-family: 'Font Awesome\ 5 Free';
     text-decoration: none;
     color: white;
 }
