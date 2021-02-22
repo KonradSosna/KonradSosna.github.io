@@ -1,0 +1,23 @@
+{
+  "short_name": "Web Developer",
+  "name": "My personal website",
+  "icons": [
+    {
+      "src": "/logo-small.png",
+      "type": "image/webp",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo-big.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#202020",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "#202020"
+}
