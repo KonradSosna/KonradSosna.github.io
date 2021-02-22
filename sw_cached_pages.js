@@ -49,6 +49,7 @@ workbox.googleAnalytics.initialize();
 
 self.addEventListener("fetch", (evt) => {
     console.log("[ServiceWorker] Fetch", evt.request.url);
+    if (evt.request.cache === 'only-if-cached' && evt.request.mode !== 'same-origin') return;
     if (evt.request.url.includes("konradsosna.github.io/")) {
         evt.respondWith(
             caches.open(CACHE_NAME).then((cache) => {
