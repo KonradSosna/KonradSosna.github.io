@@ -23,7 +23,7 @@
 
     if (document.querySelector('.contactpage-container')) {
         $.getScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyCpW1FhsOJREdIGMVTF3AhPRXknXzaCBpw&callback=initMap&libraries=&v=weekly');
-        $.getScript('/script/mapa.js');
+        $.getScript('/script/map.js');
     }
 }
 
