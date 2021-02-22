@@ -163,6 +163,10 @@ input[type=submit], input[type=reset] {
     box-shadow: 10px 11px 5px 0px rgba(0,0,0,0.75);
 }
 
+label{
+    font-size:1px;
+}
+
 subject::-webkit-input-placeholder {
     font-family: 'Oswald', sans-serif !important;
     opacity: 1;
