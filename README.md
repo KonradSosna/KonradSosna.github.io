@@ -12,7 +12,7 @@
 - [Green Stock Animations](https://greensock.com/gsap/)
 - jQuery
 
-#### Which i used to make some cool transitions
+#### To make some cool transitions
 ![](https://media.giphy.com/media/R0irIWO9SanQ7YM5N4/giphy.gif)
 
 
