@@ -8,7 +8,7 @@
 
 ### External libs I used:
 
-- [Barba.js](https://barba.js.org/)
+- [SWUP](https://swup.js.org/)
 - [Green Stock Animations](https://greensock.com/gsap/)
 - jQuery
 
