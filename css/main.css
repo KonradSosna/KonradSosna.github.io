@@ -9,7 +9,7 @@
 
 .fab {
     font-family: Font Awesome\ 5 Brands
-}
+}skills
 
 @font-face {
     font-family: Font Awesome\ 5 Free;
@@ -459,6 +459,12 @@ input[type=text] {
     margin-left: 60px;
     justify-content: space-evenly;
 }
+
+    .skillspage-container a {
+        font-family: 'Oswald';
+        color: #cc2222;
+        font-weight: 700;
+    }
 
 .text-zone {
     padding-left:60px;
